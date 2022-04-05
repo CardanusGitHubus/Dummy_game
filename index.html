@@ -3,29 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Сайт с авторизацией и чатом">
+  <meta name="description" content="Игра с авторизацией и чатом">
   <meta name="author" content="lebedev.free@gmail.com dalexeych@gmail.com">
   <title>DummyGame</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body class="page">
-  <!--header sections and stuff-->
+  <header></header>
+  <main></main>
+  <footer></footer>
+  
+  <div class="form form_type_singup form_visable">
+    <h2 class="form__title">Sign in up</h2>
+    <p class="form__subtitle">Interactive web DummyGame</p>
+    <a class="form__switch-link" href="#">
+      If you already have an account register You can <span class="form__span">Login here!</span>
+    </a>
+    <!-- lables for future custom error elements -->
+    <form class="form__fields" name="singup" novalidate>
+      <label class="form__field">
+        <input class="form__input" type="text" id="singup-name" placeholder="Enter uesername" required minlength="3" maxlength="30">
+      </label>
+      <label class="form__field">
+        <input class="form__input" type="email" id="singup-email" placeholder="Enter email" required minlength="3" maxlength="30">
+      </label>
+      <label class="form__field">
+        <input class="form__input" type="tel" id="singup-phone" placeholder="Enter phone number">
+      </label>
+      <label class="form__field">
+        <input class="form__input" type="password" id="singup-password" placeholder="Enter password" required minlength="3" maxlength="30">
+      </label>
+      <label class="form__field">
+        <input class="form__input" type="password" id="singup-password-confirm" placeholder="Confirm password" required minlength="3" maxlength="30">
+      </label>
+      <button class="form__button" type="submit">Register</button>
+    </form>
+    <div class="form__social-container">
+      <a class="form__sosial-icon form__sosial-icon_type_fb" href="#"></a>
+      <a class="form__sosial-icon form__sosial-icon_type_gh" href="#"></a>
+      <a class="form__sosial-icon form__sosial-icon_type_insta" href="#"></a>
+    </div>
+  </div>
 
-  <div class="form form_type_login form_visable">
-    <h2 class="form__title"></h2>
-    <p class="form__subtitle>"></p>
-    <p class="form__description"></p>
+  <div class="form form_type_login">
+    <h2 class="form__title">Sign in to</h2>
+    <p class="form__subtitle">Interactive web DummyGame</p>
+    <a class="form__switch-link" href="#">
+      If you don’t have an account register You can <span class="form__span">Register here!</span>
+    </a>
+    <!-- lables for future custom error elements -->
     <form class="form__fields" name="login" novalidate>
       <label class="form__field">
-        <input type="text" id="login-name" placeholder="Enter uesername or email" required minlength="3" maxlength="30">
+        <input class="form__input" type="text" id="login-name" placeholder="Enter uesername or email" required minlength="3" maxlength="30">
       </label>
       <label class="form__field">
-        <input type="password" id="login-password" placeholder="Enter password" required minlength="3" maxlength="30">
+        <input class="form__input" type="password" id="login-password" placeholder="Enter password" required minlength="3" maxlength="30">
       </label>
-      <button class="" type="submit" disabled>Login</button>
+      <p class="form__recovery-link">Forgot password? Bad for you!</p>
+      <button class="form__button" type="submit">Login</button>
     </form>
-    <!--social login to be placed here-->
+    <div class="form__social-container">
+      <a class="form__sosial-icon form__sosial-icon_type_fb" href="#"></a>
+      <a class="form__sosial-icon form__sosial-icon_type_gh" href="#"></a>
+      <a class="form__sosial-icon form__sosial-icon_type_insta" href="#"></a>
+    </div>
   </div>
 
 <!--scripts-->
