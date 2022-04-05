@@ -1,3 +1,17 @@
 @import url(../vendor/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 @import url(../blocks/page.css);
+
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/form__title.css);
+@import url(../blocks/form/form__subtitle.css);
+@import url(../blocks/form/form__switch-link.css);
+@import url(../blocks/form/form__span.css);
+
+@import url(../blocks/form/form__fields.css);
+@import url(../blocks/form/form__field.css);
+@import url(../blocks/form/form__input.css);
+@import url(../blocks/form/form__recovery-link.css);
+@import url(../blocks/form/form__button.css);
+@import url(../blocks/form/form_visable.css);

@@ -1,0 +1,10 @@
+.form__switch-link {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 52px;
+}

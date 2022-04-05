@@ -1,0 +1,5 @@
+.form_visable {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
