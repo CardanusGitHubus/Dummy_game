@@ -9,7 +9,25 @@
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 
-<body>
+<body class="page">
+  <!--header sections and stuff-->
 
+  <div class="form form_type_login form_visable">
+    <h2 class="form__title"></h2>
+    <p class="form__subtitle>"></p>
+    <p class="form__description"></p>
+    <form class="form__fields" name="login" novalidate>
+      <label class="form__field">
+        <input type="text" id="login-name" placeholder="Enter uesername or email" required minlength="3" maxlength="30">
+      </label>
+      <label class="form__field">
+        <input type="password" id="login-password" placeholder="Enter password" required minlength="3" maxlength="30">
+      </label>
+      <button class="" type="submit" disabled>Login</button>
+    </form>
+    <!--social login to be placed here-->
+  </div>
+
+<!--scripts-->
 </body>
 </html>
