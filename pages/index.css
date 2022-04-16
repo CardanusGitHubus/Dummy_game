@@ -17,8 +17,23 @@
 @import url(../blocks/form/form__recovery-link.css);
 @import url(../blocks/form/form__button.css);
 @import url(../blocks/form/form_visable.css);
+@import url(../blocks/form/form__textarea.css);
+@import url(../blocks/form/form__button_small.css);
 
 @import url(../blocks/chatlist/chatlist.css);
 
 @import url(../blocks/game/game.css);
 @import url(../blocks/game/game__wrapper.css);
+
+@import url(../blocks/chat/chat.css);
+
+@import url(../blocks/message/message.css);
+@import url(../blocks/message/message__text.css);
+@import url(../blocks/message/message__user.css);
+@import url(../blocks/message/message__button.css);
+@import url(../blocks/message/message__time.css);
+@import url(../blocks/message/message__textbox.css);
+@import url(../blocks/message/message_self.css);
+@import url(../blocks/message/message__text_self.css);
+@import url(../blocks/message/message__time_self.css);
+@import url(../blocks/message/message__status.css);

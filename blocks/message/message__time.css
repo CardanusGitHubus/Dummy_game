@@ -1,0 +1,8 @@
+.message__time {
+  position: absolute;
+  bottom: -36px;
+  right: 24px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #707C97B2;
+}

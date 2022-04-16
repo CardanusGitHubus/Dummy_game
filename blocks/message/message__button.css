@@ -1,0 +1,15 @@
+.message__button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #B7BDCB;
+  text-align: center;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.message__button::before {
+  content: '\2219 \2219 \2219';
+}

@@ -1,0 +1,9 @@
+.message__user {
+  object-fit: cover;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  align-self: flex-start;
+  margin-right: 24px;
+}

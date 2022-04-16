@@ -20,4 +20,4 @@ const createToggleListeners = (elements) => {
   });
 };
 
-window.onload = createToggleListeners(loginForms);
+// window.onload = createToggleListeners(loginForms);

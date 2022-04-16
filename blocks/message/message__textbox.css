@@ -1,0 +1,6 @@
+.message__textbox {
+  width: max-content;
+  max-width: 70%;
+  cursor: pointer;  
+  position: relative;
+}
