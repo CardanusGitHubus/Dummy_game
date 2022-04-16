@@ -11,10 +11,42 @@
 
 <body class="page">
   <header></header>
-  <main></main>
+  <main class="content">
+    <!-- itmem here supposed to be created from template for every chat, its an example -->
+    <section class="chatlist">
+      <div>
+        <h2 class="chatlist__title">Chats</h2>
+        <button class="chatlist__create"></button>
+      </div>
+      <ul class="chatlist__list">
+        <li class="chatlist__item">
+          <div class="chatlist__userpic"></div>
+          <h3 class="chatlist__username"></h3>
+          <p class="chatlist__onlinestatus"></p>
+          <p class="chatlist__history"></p>
+        </li>
+      </ul>
+    </section>
+    
+    <section class="game">        
+    </section>
+
+    <section class="chat">
+      <div class="chat__wrapper"></div>
+      <div class="chat__scrollbar"></div>
+      <div class="chat__paginator"></div>
+      <form class="form form_type_send form_visable">
+        <textarea class="form__textarea">
+        </textarea>
+        <button class="form__button">+</button>
+        <button class="form__button">SEND</button>
+      </form>
+    </section>  
+  </main>
   <footer></footer>
   
-  <div class="form form_type_singup form_visable">
+  <!-- visability class = form_visable -->
+  <div class="form form_type_singup">
     <h2 class="form__title">Sign in up</h2>
     <p class="form__subtitle">Interactive web DummyGame</p>
     <a class="form__switch-link" href="#">

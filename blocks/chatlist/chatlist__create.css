@@ -1,0 +1,10 @@
+.chatlist__cerate {
+  width: 100%;
+  height: 62px;
+  background-color: #4d47c3;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
