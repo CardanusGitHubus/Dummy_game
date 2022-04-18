@@ -44,7 +44,7 @@
         </div>
 
         <div class="message message_self">
-          <div src="#" class="message__user message__status">&#10004;</div>
+          <div src="#" class="message__user message__status"></div>
           <div class="message__textbox">
             <p class="message__text message__text_self">Два!!!</p>
             <p class="message__time message__time_self">00:01</p>
@@ -63,11 +63,17 @@
       </div>
       <div class="chat__scrollbar"></div>
       <div class="chat__paginator"></div>
-      <form class="form form_type_send form_visable">
-        <textarea class="form__textarea">
+      <form class="chat__form form form_type_send form_visable">
+        <textarea class="form__textarea chat__textarea">
         </textarea>
-        <button class="form__button form__button_small">+</button>
-        <button class="form__button form__button_small">SEND</button>
+        <label class="chat__controls">
+          <button class="form__button form__button_small chat__button">
+            <svg viewBox="-5 -5 50 50" fill="#fff">
+              <text font-size="36" x="0" y="36">;-)</text>
+            </svg>
+          </button>
+          <button class="form__button form__button_small chat__button chat__button_send"></button>
+        </label>
       </form>
     </div> 
   </main>

@@ -1,0 +1,4 @@
+.chat__button_send {
+  -webkit-mask: url(../../images/send-svgrepo-com.svg) no-repeat;
+  mask: url(../../images/send-svgrepo-com.svg) no-repeat;
+}

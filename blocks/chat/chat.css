@@ -1,3 +1,5 @@
 .chat {
+  padding: 20px;
+  max-width: 300px;
   min-width: 250px;
 }

@@ -37,3 +37,10 @@
 @import url(../blocks/message/message__text_self.css);
 @import url(../blocks/message/message__time_self.css);
 @import url(../blocks/message/message__status.css);
+
+@import url(../blocks/chat/chat.css);
+@import url(../blocks/chat/chat__form.css);
+@import url(../blocks/chat/chat__controls.css);
+@import url(../blocks/chat/chat__button.css);
+@import url(../blocks/chat/chat__button_send.css);
+@import url(../blocks/chat/chat__button_emoji.css);

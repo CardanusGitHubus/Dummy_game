@@ -1,0 +1,4 @@
+.chat__controls {
+  display: flex;
+  flex-direction: row;
+}

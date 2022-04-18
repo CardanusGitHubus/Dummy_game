@@ -10,6 +10,7 @@ const toggleForm = (elements, visableClass) => {
   elements.forEach((elem) => elem.classList.toggle(uglyClassList.visableClass));
 };
 
+
 const createToggleListeners = (elements) => {
   elements.forEach((element) => {
     const toggleButton = element.querySelector(uglyClassList.switchClass);
@@ -20,4 +21,12 @@ const createToggleListeners = (elements) => {
   });
 };
 
-// window.onload = createToggleListeners(loginForms);
+const specialContainer = {
+  '🐕': '1',
+  '🐈': '2',
+}
+
+const makeSomeCake = () => console.log(specialContainer['🐕']);
+
+ window.onload = makeSomeCake;
+ // createToggleListeners(loginForms);
