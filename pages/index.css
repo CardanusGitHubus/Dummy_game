@@ -37,6 +37,7 @@
 @import url(../blocks/message/message__text_self.css);
 @import url(../blocks/message/message__time_self.css);
 @import url(../blocks/message/message__status.css);
+@import url(../blocks/message/message_select.css);
 
 @import url(../blocks/chat/chat.css);
 @import url(../blocks/chat/chat__form.css);

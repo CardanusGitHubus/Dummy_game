@@ -33,39 +33,11 @@
     </section>
 
     <section class="chat">
-      <div class="chat__wrapper">
-        <div class="message">
-          <img src="./images/defaultuser.svg" class="message__user">
-          <div class="message__textbox">
-            <p class="message__text">раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! раз! </p>
-            <p class="message__time">00:01</p>
-          </div>
-          <button class="message__button"></button>
-        </div>
-
-        <div class="message message_self">
-          <div src="#" class="message__user message__status"></div>
-          <div class="message__textbox">
-            <p class="message__text message__text_self">Два!!!</p>
-            <p class="message__time message__time_self">00:01</p>
-          </div>
-          <button class="message__button"></button>
-        </div>
-
-        <div class="message">
-          <img src="./images/defaultuser.svg" class="message__user">
-          <div class="message__textbox">
-            <p class="message__text">Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!Tri!!!</p>
-            <p class="message__time">00:02</p>
-          </div>
-          <button class="message__button"></button>
-        </div>
-      </div>
+      <div class="chat__wrapper"></div>
       <div class="chat__scrollbar"></div>
       <div class="chat__paginator"></div>
-      <form class="chat__form form form_type_send form_visable">
-        <textarea class="form__textarea chat__textarea">
-        </textarea>
+      <form class="chat__form form_type_send form_visable">
+        <textarea class="form__textarea chat__textarea"></textarea>
         <label class="chat__controls">
           <button class="form__button form__button_small chat__button">
             <svg viewBox="-5 -5 50 50" fill="#fff">
@@ -136,15 +108,30 @@
     </div>
   </div>
 
-  <template class="message-template">
+  <template id="message-template">
     <div class="message">
-      <p class="message-text"></p>
-      <p class="message-time"></p>
-      <button class="message-button">...</button>
+      <img src="#" class="message__user">
+      <div class="message__textbox">
+        <p class="message__text"></p>
+        <p class="message__time"></p>
+      </div>
+      <button type="submit" class="message__button"></button>
+    </div>
+  </template>
+
+  <template id="message-template-self">
+    <div class="message message_self">
+      <div src="#" class="message__user message__status"></div>
+      <div class="message__textbox">
+        <p class="message__text message__text_self"></p>
+        <p class="message__time message__time_self"></p>
+      </div>
+      <button class="message__button"></button>
     </div>
   </template>
 
 <!--scripts-->
-<script src="./scripts/index.js" defer></script>
+<script type="module" src="./scripts/index.js"></script>
+<script type="module" src="./scripts/message.js"></script>
 </body>
 </html>
