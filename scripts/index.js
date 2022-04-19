@@ -53,7 +53,8 @@ const chatFormButton = chatForm.querySelector('.chat__button_send');
 const handleSubmit = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
-  if (chatInput.value !='') chatWrapper.append(new MessageSelf(chatInput.value, '../images/defaultuser.svg').getElement())
+  if (chatInput.value !='') chatWrapper.append(new MessageSelf(chatInput.value, '../images/defaultuser.svg').getElement());
+  chatInput.value = '';
 }
 
 fakeMessageHistory.forEach(element => 
@@ -66,8 +67,6 @@ chatWrapper.append(testMessage.getElement());
 chatForm.addEventListener('submit', _ => handleSubmit(_));
 chatFormButton.addEventListener('click', _ => handleSubmit(_));
 chatInput.addEventListener('keydown', (evt) => {
-  if (evt.keyCode == 13) {
-    handleSubmit(evt);
-    chatInput.value = '';
-  }
+  if (evt.keyCode == 13) handleSubmit(evt);
+  
 });
