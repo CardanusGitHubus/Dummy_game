@@ -1,4 +1,7 @@
-import {Message, MessageSelf} from "./message.js";
+import {Message, MessageSelf} from "../scripts/message.js";
+import './index.css'
+
+import defaultImage from '../images/defaultuser.svg'
 
 const fakeMessageHistory = [
   {
@@ -53,15 +56,15 @@ const chatFormButton = chatForm.querySelector('.chat__button_send');
 const handleSubmit = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
-  if (chatInput.value !='') chatWrapper.append(new MessageSelf(chatInput.value, '../images/defaultuser.svg').getElement());
+  if (chatInput.value !='') chatWrapper.append(new MessageSelf(chatInput.value, defaultImage).getElement());
   chatInput.value = '';
 }
 
 fakeMessageHistory.forEach(element => 
-  chatWrapper.append((element.self? new MessageSelf(element.text) :new Message(element.text, '../images/defaultuser.svg')).getElement())
+  chatWrapper.append((element.self? new MessageSelf(element.text) :new Message(element.text, defaultImage)).getElement())
 );
 
-const testMessage = new Message('HI Im form JS', '../images/defaultuser.svg');
+const testMessage = new Message('HI Im form JS', defaultImage);
 chatWrapper.append(testMessage.getElement());
 
 chatForm.addEventListener('submit', _ => handleSubmit(_));

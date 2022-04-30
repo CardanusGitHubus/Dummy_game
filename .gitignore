@@ -1,4 +1,7 @@
 # Environments
+dev
+node_modules
+
 .env 
 .venv 
 env/ 
