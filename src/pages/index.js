@@ -1,7 +1,7 @@
 import {Message, MessageSelf} from "../scripts/message.js";
-import './index.css'
+import './index.css';
 
-import defaultImage from '../images/defaultuser.svg'
+import defaultImage from '../images/defaultuser.svg';
 
 const fakeMessageHistory = [
   {

@@ -6,3 +6,7 @@
   line-height: 26px;
   color: #707C97B2;
 }
+
+.message_self .message__time_self {
+  left: 5px;
+}

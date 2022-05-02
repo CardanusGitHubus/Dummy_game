@@ -7,3 +7,16 @@
   align-self: flex-start;
   margin-right: 24px;
 }
+
+.message_self .message__status {
+  display: none;
+  margin-left: 10px;
+  position: relative;
+}
+
+.message_self .message__status::before {
+  content: '✔' ;
+  position: relative;
+  top: 20%;
+  color: #B7BDCB;  
+}

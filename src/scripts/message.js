@@ -1,14 +1,14 @@
 export {Message, MessageSelf};
 
 class Message {
-  static _template() {
-    const newElement = document
-      .querySelector('#message-template')
-      .content
-      .querySelector('.message')
-      .cloneNode(true);
-    return newElement;
-  }
+    static _template() {
+      const newElement = document
+        .querySelector('#message-template')
+        .content
+        .querySelector('.message')
+        .cloneNode(true);
+      return newElement;
+    }
 
   constructor (textString, userPicUrl) {
     this._text = textString;
