@@ -1,0 +1,6 @@
+.chat__head {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafbff;
+  padding: 28px 0;
+}

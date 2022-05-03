@@ -2,10 +2,3 @@
   margin-left: 10px;
   position: relative;
 }
-
-.message__status::before {
-  content: '✔' ;
-  position: relative;
-  top: 20%;
-  color: #B7BDCB;  
-}

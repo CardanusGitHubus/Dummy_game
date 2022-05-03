@@ -4,6 +4,12 @@
 @import url(../blocks/page.css);
 @import url(../blocks/content/content.css);
 
+@import url(../blocks/user/user.css);
+@import url(../blocks/user/user__info.css);
+@import url(../blocks/user/user__pic.css);
+@import url(../blocks/user/user__name.css);
+@import url(../blocks/user/user__online.css);
+
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/form__title.css);
 @import url(../blocks/form/form__subtitle.css);
@@ -38,8 +44,10 @@
 @import url(../blocks/message/message_select.css);
 
 @import url(../blocks/chat/chat.css);
+@import url(../blocks/chat/chat__head.css);
 @import url(../blocks/chat/chat__form.css);
 @import url(../blocks/chat/chat__controls.css);
 @import url(../blocks/chat/chat__button.css);
 @import url(../blocks/chat/chat__button_send.css);
 @import url(../blocks/chat/chat__button_emoji.css);
+@import url(../blocks/chat/chat__button_top.css);

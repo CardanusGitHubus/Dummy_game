@@ -32,6 +32,16 @@
     </section>
 
     <section class="chat">
+      <div class="chat__head">
+        <div class="user">
+          <img class="user__pic" src=<%=require("./images/defaultuser.svg")%> alt="userpic">
+          <div class="user__info">
+            <h2 class="user__name">User Name</h2>
+            <p class="user__oline">last online: 5min ago</p>
+          </div>
+        </div>
+        <button class="chat__button chat__button_top"></button>
+      </div>
       <div class="chat__wrapper"></div>
       <div class="chat__scrollbar"></div>
       <div class="chat__paginator"></div>
@@ -117,7 +127,7 @@
       <button type="submit" class="message__button"></button>
     </div>
   </template>
-
+  <!--user own message have mod "self" aka message-self -->
   <template id="message-template-self">
     <div class="message message_self">
       <img src="#" class="message__user"></img>
