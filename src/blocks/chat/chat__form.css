@@ -9,6 +9,6 @@
 }
 
 .chat__form:focus-within {
-  flex-direction: column;
-  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }

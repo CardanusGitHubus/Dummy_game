@@ -1,4 +1,14 @@
 .chat__controls {
   display: flex;
   flex-direction: row;
+  position: relative;
+  top: 45px;
+  transform: translate(0, -45px);
+  transition: transform .3s ease-in;
+}
+
+.chat__form:focus-within .chat__controls {
+  top: 0;
+  transform: translate(0);
+  transition: transform .3s ease-in-out;
 }
