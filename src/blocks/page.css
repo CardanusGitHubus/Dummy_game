@@ -17,6 +17,18 @@
   position: relative;
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper {
+  height: 100%;
+  overflow: auto;
+}
+.swiper-slide {
+  height: auto;
+}
+
 @media screen and (min-width: 1440px) {
   .page {
     max-width: 1440px;

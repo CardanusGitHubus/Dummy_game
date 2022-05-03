@@ -3,6 +3,22 @@ import './index.css';
 
 import defaultImage from '../images/defaultuser.svg';
 
+import Swiper, { Scrollbar } from 'swiper';
+import 'swiper/css';
+
+const chatSwiper = new Swiper('.swiper',{
+  modules: [Scrollbar],
+  direction: "vertical",
+  slidesPerView: "auto",
+  centeredSlides:false,
+  loop:false,
+  freeMode: true,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  mousewheel: true,
+});
+
 const fakeMessageHistory = [
   {
     self: false,
