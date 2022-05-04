@@ -1,6 +1,6 @@
 .chatlist {
   background: yellow;
-  max-width: 600px;
+  width: 30vw;
   padding-top: 100px;
   grid-row: 1 / 3;
 }

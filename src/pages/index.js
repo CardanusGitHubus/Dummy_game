@@ -18,7 +18,7 @@ const chatSwiper = new Swiper('.swiper', {
   modules: [Scrollbar, Mousewheel, Manipulation],
   watchOverflow: true,
   direction: "vertical",
-  speed: 200,
+  speed: 220,
 
   // refuses to work:
 
