@@ -1,41 +1,44 @@
 import {Message, MessageSelf} from "../scripts/message.js";
 import './index.css';
+import {
+  fakeuserList,
+  fakeChatHistory,
+  fakeChatHistoryTwo
+} from "../utils/constants.js";
 
+import { Swiper, Scrollbar, Manipulation, Mousewheel} from 'swiper';
 import defaultImage from '../images/defaultuser.svg';
 
-import Swiper, { Scrollbar } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/scrollbar';
+import 'swiper/css/mousewheel';
 
-const chatSwiper = new Swiper('.swiper',{
-  modules: [Scrollbar],
+// Swiper.use([Scrollbar, Mousewheel]);
+const chatSwiper = new Swiper('.swiper', {
+  modules: [Scrollbar, Mousewheel, Manipulation],
+  watchOverflow: true,
   direction: "vertical",
+  speed: 200,
+
+  // refuses to work:
+
   slidesPerView: "auto",
   centeredSlides:false,
-  loop:false,
   freeMode: true,
-  scrollbar: {
-    el: ".swiper-scrollbar",
+  mousewheel: {
+    eventsTarget: '.chat',
+    enabled: true,
+    sensitivity: 9.9,
+    releaseOnEdges: true,
   },
-  mousewheel: true,
-});
 
-const fakeMessageHistory = [
-  {
-    self: false,
-    text: 'раз!',
-    date: '00:00',
+  scrollbar: {
+    el: "swiper-scrollbar",
+    draggable: true,
+    dragSize: 600
   },
-  {
-    self: true,
-    text: 'Два!',
-    date: '00:00',
-  },
-  {
-    self: false,
-    text: 'Три!',
-    date: '00:00',
-  },
-]
+  autoHeight: true
+});
 
 const uglyClassList = {
   formClass: '.form',
@@ -76,7 +79,7 @@ const handleSubmit = (evt) => {
   chatInput.value = '';
 }
 
-fakeMessageHistory.forEach(element => 
+fakeChatHistory.forEach(element => 
   chatWrapper.append((element.self? new MessageSelf(element.text) :new Message(element.text, defaultImage)).getElement())
 );
 

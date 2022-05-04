@@ -25,7 +25,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: 'babel-loader',
-        exclude: '/node_modules/'
+        exclude: /node_modules\/(?!(swiper|dom7)\/).*/,
       },
       {
         test: /\.(png|svg|jpg|gif|webp|woff(2)?|eot|ttf|otf)$/,

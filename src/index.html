@@ -42,13 +42,10 @@
         </div>
         <button class="chat__button chat__button_top"></button>
       </div>
-
+      
       <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="chat__wrapper"></div>
-        </div>
+        <div class="swiper-wrapper chat__wrapper"></div>
         <div class="swiper-scrollbar"></div>
-        <div class="chat__paginator"></div>
       </div>
 
       <form class="chat__form form_type_send form_visable">
@@ -67,7 +64,7 @@
   <footer></footer>
   
   <!-- visability class = form_visable -->
-  <div class="form form_type_singup">
+  <div class="form form_type_singup ">
     <h2 class="form__title">Sign in up</h2>
     <p class="form__subtitle">Interactive web DummyGame</p>
     <a class="form__switch-link" href="#">
@@ -124,7 +121,7 @@
   </div>
 
   <template id="message-template">
-    <div class="message">
+    <div class="swiper-slide message ">
       <img src="#" class="message__user">
       <div class="message__textbox">
         <p class="message__text"></p>
@@ -135,7 +132,7 @@
   </template>
   <!--user own message have mod "self" aka message-self -->
   <template id="message-template-self">
-    <div class="message message_self">
+    <div class="swiper-slide message message_self">
       <img src="#" class="message__user"></img>
       <div class="message__textbox">
         <p class="message__text"></p>

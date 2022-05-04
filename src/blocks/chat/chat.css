@@ -1,6 +1,10 @@
 .chat {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   max-width: 300px;
   min-width: 250px;
-  max-height: 400px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
 }
