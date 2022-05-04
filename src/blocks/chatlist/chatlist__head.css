@@ -1,5 +1,5 @@
-.chat__head {
+.chatlist__head {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 28px;
+  align-items: center;
 }

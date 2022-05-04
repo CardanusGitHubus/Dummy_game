@@ -1,6 +1,5 @@
 .chatlist {
-  background: yellow;
-  width: 30vw;
-  padding-top: 100px;
+  width: 45vw;
+  padding: 0 80px 0;
   grid-row: 1 / 3;
 }

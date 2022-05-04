@@ -1,0 +1,12 @@
+.chatlist__item {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  color: #707C97;
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 20px 10px;
+  box-sizing: border-box;
+}

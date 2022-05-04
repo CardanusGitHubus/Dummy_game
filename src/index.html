@@ -13,17 +13,24 @@
   <main class="content">
     <!-- itmem here supposed to be created from template for every chat, its an example -->
     <section class="chatlist">
-      <div>
+      <div class="chatlist__head">
         <h2 class="chatlist__title">Chats</h2>
-        <button class="chatlist__create"></button>
+        <button class="chatlist__create ">
+          <div class="chatlist__plus"></div>
+            do something
+        </button>
       </div>
       <ul class="chatlist__list">
         <li class="chatlist__item">
-          <div class="chatlist__userpic"></div>
-          <h3 class="chatlist__username"></h3>
-          <p class="chatlist__onlinestatus"></p>
-          <p class="chatlist__history"></p>
-        </li>
+          <div class="user">
+            <img class="user__pic" src=<%=require("./images/defaultuser.svg")%> alt="userpic">
+            <div class="user__info">
+              <h2 class="user__name">User Name</h2>
+              <p class="user__oline">last online: 5min ago</p>
+            </div>
+          </div>
+            <p class="chatlist__message">last message</p>
+          </li>
       </ul>
     </section>
   
@@ -42,7 +49,7 @@
         </div>
         <button class="chat__button chat__button_top"></button>
       </div>
-      
+
       <div class="swiper">
         <div class="swiper-wrapper chat__wrapper"></div>
         <div class="swiper-scrollbar"></div>

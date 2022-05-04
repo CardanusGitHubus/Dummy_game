@@ -1,10 +1,22 @@
 .chatlist__create {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 0 20px;
+  max-width: 240px;
   height: 62px;
-  background-color: #4d47c3;
+  background: linear-gradient(92.68deg, #7CB8F7 0%, #2A8BF2 100%);
+box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15), 4px 4px 25px rgba(42, 139, 242, 0.05), 10px 6px 25px rgba(42, 139, 242, 0.15);
   color: #fff;
   border-radius: 8px;
   border: none;
   margin-top: 10px;
   cursor: pointer;
+
+  color: #fff;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
 }
