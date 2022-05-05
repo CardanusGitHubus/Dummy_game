@@ -26,11 +26,11 @@
             <img class="user__pic" src=<%=require("./images/defaultuser.svg")%> alt="userpic">
             <div class="user__info">
               <h2 class="user__name">User Name</h2>
-              <p class="user__oline">last online: 5min ago</p>
+              <p class="user__online">last online: 5min ago</p>
             </div>
           </div>
-            <p class="chatlist__message">last message</p>
-          </li>
+          <p class="chatlist__message">last message</p>
+        </li>
       </ul>
     </section>
   
@@ -44,7 +44,7 @@
           <img class="user__pic" src=<%=require("./images/defaultuser.svg")%> alt="userpic">
           <div class="user__info">
             <h2 class="user__name">User Name</h2>
-            <p class="user__oline">last online: 5min ago</p>
+            <p class="user__online">last online: 5min ago</p>
           </div>
         </div>
         <button class="chat__button chat__button_top"></button>
@@ -147,6 +147,19 @@
       </div>
       <button class="message__button"></button>
     </div>
+  </template>
+
+  <template id="chatroom-template">
+    <li class="chatlist__item">
+      <div class="user">
+        <img class="user__pic" src="#" alt="userpic">
+        <div class="user__info">
+          <h2 class="user__name"></h2>
+          <p class="user__online"></p>
+        </div>
+      </div>
+      <p class="chatlist__message">djfad;fjklhf;skdhfd</p>
+    </li>
   </template>
 </body>
 </html>

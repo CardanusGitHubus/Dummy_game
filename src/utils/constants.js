@@ -1,19 +1,6 @@
 export {fakeuserList, fakeChatHistory, fakeChatHistoryTwo};
 import defaultImage from '../images/defaultuser.svg';
 
-
-const fakeuserList = [
-  {
-    userName: 'User1',
-    userPic: defaultImage
-  },
-  {
-    
-    userName: 'User1',
-    userPic: defaultImage
-  }
-]
-
 const fakeChatHistory = [
   {
     self: false,
@@ -49,3 +36,18 @@ const fakeChatHistoryTwo = [
     date: '00:00',
   },
 ]
+
+const fakeuserList = [
+  {
+    userName: 'User1',
+    userPic: defaultImage,
+    history: fakeChatHistory
+  },
+  {
+    
+    userName: 'User1',
+    userPic: defaultImage,
+    history: fakeChatHistoryTwo
+  }
+]
+
