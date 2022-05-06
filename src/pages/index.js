@@ -15,6 +15,8 @@ import 'swiper/css/mousewheel';
 
 import Section from "../components/Section.js";
 import ChatRoom from "../components/ChatRoom.js";
+import Chat from "../components/Chat.js";
+import ChatList from "../components/ChatList.js";
 
 // Swiper.use([Scrollbar, Mousewheel]);
 const chatSwiper = new Swiper('.swiper', {
@@ -53,9 +55,19 @@ const uglyClassList = {
 //creating chat list from array for now
 
 const chatRoomList = new Section('chatlist__list');
-const chatRooms = fakeuserList.map(user => new ChatRoom(
+const activeChat = new Chat('.chat');
+
+const chatRooms = fakeuserList.map(user => {
+  const room = new ChatRoom(
   {
     user: user,
+    clickHandler: () => {
+      room.activate();
+      activeChat.switchRoom(user)
+    },
     renderChatRoom: (_) => {chatRoomList.add(_)},
-  }
-));
+  })
+  return room;
+});
+
+const chatList = new ChatList('chatlist__item_active');

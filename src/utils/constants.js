@@ -5,17 +5,17 @@ const fakeChatHistory = [
   {
     self: false,
     text: 'раз!',
-    date: '00:00',
+    date: 'вечер',
   },
   {
     self: true,
     text: 'Два!',
-    date: '00:00',
+    date: 'ночь',
   },
   {
     self: false,
     text: 'Три!',
-    date: '00:00',
+    date: 'утро',
   },
 ]
 
@@ -23,17 +23,17 @@ const fakeChatHistoryTwo = [
   {
     self: false,
     text: 'chetire!',
-    date: '00:00',
+    date: '00:99',
   },
   {
     self: true,
     text: 'pyat`!',
-    date: '00:00',
+    date: '00:02',
   },
   {
     self: false,
     text: 'SHEST`!',
-    date: '00:00',
+    date: '00:03',
   },
 ]
 
@@ -45,7 +45,7 @@ const fakeuserList = [
   },
   {
     
-    userName: 'User1',
+    userName: 'User2',
     userPic: defaultImage,
     history: fakeChatHistoryTwo
   }

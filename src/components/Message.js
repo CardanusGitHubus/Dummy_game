@@ -1,6 +1,6 @@
 export default class Message {
-  constructor (data, selector) {
-    this._clickHandler = data.clickHandler;
+  constructor (data, clickHandler) {
+    this._clickHandler = clickHandler;
   }
   
   static _template = document
@@ -8,7 +8,7 @@ export default class Message {
       .content
       .querySelector(selector); 
 
-  _getElement() {
+  getElement() {
     const messageElement = Message._template.cloneNode(true);
     this._fillMessage(messageElement);
     this._setEventListeners(messageElement);
