@@ -1,5 +1,8 @@
 export default class Message {
   constructor (data, clickHandler) {
+    this._pic = data.userPic;
+    this._text = data.text;
+    this._time = data._time;
     this._clickHandler = clickHandler;
   }
   

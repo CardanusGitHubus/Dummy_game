@@ -1,7 +1,7 @@
 import Message from "./Message";
 
 export default class MessageSelf {
-  constructor(data, selector) {
+  constructor(data) {
     super(data);
   }
 

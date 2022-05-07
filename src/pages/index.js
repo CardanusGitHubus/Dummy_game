@@ -54,7 +54,7 @@ const uglyClassList = {
 
 //creating chat list from array for now
 
-const chatRoomList = new Section('chatlist__list');
+const chatRoomList = new Section('.chatlist__list');
 const activeChat = new Chat('.chat');
 
 const chatRooms = fakeuserList.map(user => {

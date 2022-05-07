@@ -1,7 +1,7 @@
 // chat section rendering
 import Section from './Section';
 import defaultImage from '../images/defaultuser.svg';
-import { Message } from '../scripts/message';
+import { Message, MessageSelf } from '../scripts/message';
 
 export default class Chat {
   constructor(selector) {
@@ -16,7 +16,7 @@ export default class Chat {
     this._button = this._chatElement.querySelector('.chat__button_send');
     this._textarea = this._chatElement.querySelector('.chat__textarea');
 
-    this._messageContainer = new Section('.chat-wrapper');
+    this._messageContainer = new Section('.chat__wrapper');
 
     
     this._handleEnterKey = this._handleEnterKey.bind(this);
@@ -67,7 +67,8 @@ export default class Chat {
       text: textContent,
       time: date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     }
-    const message = new Message(params);
+    const message = new MessageSelf(params);
+    this._messageContainer.add(message.getElement());
     this._pushMessageArray(params);
     return message;
   }

@@ -4,7 +4,7 @@
 export default class Section {
   constructor(selector) {
     this._selector = selector;
-    this._containerElement = document.querySelector('.chatlist__list');
+    this._containerElement = document.querySelector(this._selector);
   }
 
   add(...elements){
