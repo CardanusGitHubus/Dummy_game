@@ -7,18 +7,18 @@ import Section from "./Section";
 // calls updates in state of ui elements
 // users = [{userName, userPic, history}]
 // history = [{self?, date, text}]
-class ChatController {
+export default class ChatController {
   constructor(initialUsers) {
     this._activateRoom = _ => {};
-    this._activeChat = new Chat('.chat', this._getMessage);
+    this._activeChat = new Chat('.chat', (name, mess) => {this._getMessage(name, mess)});
     this._roomContainer = new Section('.chatlist__list');
     this._users = initialUsers;
     this.buildChatList(initialUsers);
   }
 
   buildChatList(users) {
-    chatRooms = {};
-    const chatRooms = users.map(user => {
+    const chatRooms = {};
+    users.forEach(user => {
       const room = new ChatRoom(
       {
         user: user,
@@ -27,25 +27,27 @@ class ChatController {
           this._activeChat.switchRoom(user)
         },
         renderChatRoom: _ => {this._roomContainer.add(_)},
-      })
-      chatRooms[`${user.userName}`] = room;
+      });
+      chatRooms[user.userName] = room;
     });
     this._rooms = chatRooms;
   }
   
-  _activateRoom(name) {
+  _activateRoom(user) {
     for (const key in this._rooms) {
-      (key == name)
+      (key == user.userName)
         ? this._rooms[key].activate()
         : this._rooms[key].deactivate();
     }
+    this._activeChat.switchRoom(user)
   }
 
-  _getMessage(message) {
-    const name = message.name;
+  _getMessage(username, message) {
     this._users.forEach(_ => {
-      if (_.name == message.name) _.history.push(message);
+      if (_.userName == username) {
+        _.history.push(message);
+      };
     });
-    this._rooms[name].update();
+    this._rooms[username].update(message);
   }
 }

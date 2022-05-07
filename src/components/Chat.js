@@ -1,11 +1,12 @@
 // chat section rendering
 import Section from './Section';
 import defaultImage from '../images/defaultuser.svg';
-import { Message, MessageSelf } from '../scripts/message';
-
+import Message from './Message';
+import MessageSelf from './MessageSelf';
 export default class Chat {
-  constructor(selector) {
+  constructor(selector, sendMessage) {
     this._selector = selector;
+    this._sendMessage = sendMessage;
 
     this._chatElement = document.querySelector(selector);
     this._userName = this._chatElement.querySelector('.user__name');
@@ -34,11 +35,25 @@ export default class Chat {
     this._userName.textContent = userName;
     this._userPic.src = userPic;
     this._lastOnline.textContent = history[history.length - 1].date;
+
+    this.addMessage(...history);
+  }
+
+  addMessage(...history){
+    history.forEach(message => {
+      const element = message.self
+        ?  new MessageSelf(message, _ => {})
+        :  new Message(message, _ => {});
+      
+      this._messageContainer.add(element.getElement()); 
+    });
   }
   
   switchRoom(user) {
+    this._user = user;
     this._fill(user);
-    this._pushMessageArray = user.history.push;
+    this._messageContainer.clear();
+    this.addMessage(...user.history);
   }
 
   _setEventListeners() {
@@ -65,11 +80,9 @@ export default class Chat {
     const params = {
       self: true,
       text: textContent,
-      time: date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      date: date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     }
-    const message = new MessageSelf(params);
-    this._messageContainer.add(message.getElement());
-    this._pushMessageArray(params);
-    return message;
+    this.addMessage(params);
+    this._sendMessage(this._user.userName, params);
   }
 }

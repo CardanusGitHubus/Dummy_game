@@ -1,25 +1,28 @@
+import defaultImage from '../images/defaultuser.svg';
+
 export default class Message {
-  constructor (data, clickHandler) {
-    this._pic = data.userPic;
-    this._text = data.text;
-    this._time = data._time;
+  constructor (message, clickHandler) {
+    this._text = message.text;
+    this._time = message.date;
     this._clickHandler = clickHandler;
   }
+
+  static _pic = defaultImage;
   
   static _template = document
       .querySelector('#message-template')
       .content
-      .querySelector(selector); 
+      .querySelector('.message'); 
 
   getElement() {
     const messageElement = Message._template.cloneNode(true);
     this._fillMessage(messageElement);
     this._setEventListeners(messageElement);
-    return newElement;
+    return messageElement;
   }
 
   _fillMessage(element) {
-    element.querySelector('.message__user').src = this._pic;
+    element.querySelector('.message__user').src = Message._pic;
     element.querySelector('.message__text').textContent = this._text;
     element.querySelector('.message__time').textContent = this._time;
   }
@@ -30,6 +33,5 @@ export default class Message {
   
   _removeEventListeners(element){
     element.removeEventListener('click', this._clickHandler);
-  }
-  
+  }  
 }

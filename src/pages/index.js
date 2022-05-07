@@ -1,4 +1,3 @@
-import {Message, MessageSelf} from "../scripts/message.js";
 import './index.css';
 import {
   fakeuserList,
@@ -13,10 +12,7 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/mousewheel';
 
-import Section from "../components/Section.js";
-import ChatRoom from "../components/ChatRoom.js";
-import Chat from "../components/Chat.js";
-import ChatList from "../components/ChatList.js";
+import ChatController from "../components/ChatController.js";
 
 // Swiper.use([Scrollbar, Mousewheel]);
 const chatSwiper = new Swiper('.swiper', {
@@ -45,29 +41,24 @@ const chatSwiper = new Swiper('.swiper', {
   autoHeight: true
 });
 
-const uglyClassList = {
-  formClass: '.form',
-  switchClass: '.form__switch-link',
-  visableClass: 'form_visable',
-}
-
-
 //creating chat list from array for now
 
-const chatRoomList = new Section('.chatlist__list');
-const activeChat = new Chat('.chat');
+// const chatRoomList = new Section('.chatlist__list');
+// const activeChat = new Chat('.chat');
 
-const chatRooms = fakeuserList.map(user => {
-  const room = new ChatRoom(
-  {
-    user: user,
-    clickHandler: () => {
-      room.activate();
-      activeChat.switchRoom(user)
-    },
-    renderChatRoom: (_) => {chatRoomList.add(_)},
-  })
-  return room;
-});
+// const chatRooms = fakeuserList.map(user => {
+//   const room = new ChatRoom(
+//   {
+//     user: user,
+//     clickHandler: () => {
+//       room.activate();
+//       activeChat.switchRoom(user)
+//     },
+//     renderChatRoom: (_) => {chatRoomList.add(_)},
+//   })
+//   return room;
+// });
 
-const chatList = new ChatList('chatlist__item_active');
+// const chatList = new ChatList('chatlist__item_active');
+
+const controller = new ChatController(fakeuserList);

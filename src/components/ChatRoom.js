@@ -4,7 +4,7 @@
 
 export default class ChatRoom {
 
-  constructor({ user, clickHandler, renderChatRoom, }) {
+  constructor({ user, clickHandler, renderChatRoom,}) {
     this._userPic = user.userPic;
     this._userName = user.userName;
     this._history = user.history;
@@ -56,5 +56,11 @@ export default class ChatRoom {
 
   deactivate(){
     this._chatRoomElement.classList.remove('chatlist__item_active');
+  }
+
+  update(message) {
+    this._message = message.text;
+    this._lsasOnline = message.date;
+    this._fill();
   }
 }

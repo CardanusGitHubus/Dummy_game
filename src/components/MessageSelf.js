@@ -1,20 +1,23 @@
 import Message from "./Message";
+import defaultImage from '../images/defaultuser.svg';
 
-export default class MessageSelf {
+export default class MessageSelf extends Message{
   constructor(data) {
     super(data);
   }
 
-  static _template = document
+  static _pic = defaultImage;
+
+  static _templateSelf = document
       .querySelector('#message-template-self')
       .content
-      .querySelector(selector);
+      .querySelector('.message_self');
   
-  _getElement() {
-    const messageElement = MessageSelf._template.cloneNode(true);
+  getElement() {
+    const messageElement = MessageSelf._templateSelf.cloneNode(true);
     this._fillMessage(messageElement);
     this._setEventListeners(messageElement);
-    return newElement;
+    return messageElement;
   }
   
 }
