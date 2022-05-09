@@ -1,64 +1,25 @@
 import './index.css';
 import {
   fakeuserList,
-  fakeChatHistory,
-  fakeChatHistoryTwo
 } from "../utils/constants.js";
 
-import { Swiper, Scrollbar, Manipulation, Mousewheel} from 'swiper';
-import defaultImage from '../images/defaultuser.svg';
+import {Swiper, Navigation, Pagination, Scrollbar, EffectCoverflow, Mousewheel } from 'swiper';
 
-import 'swiper/css';
-import 'swiper/css/scrollbar';
-import 'swiper/css/mousewheel';
+
+import 'swiper/bundle';
 
 import ChatController from "../components/ChatController.js";
 
-// Swiper.use([Scrollbar, Mousewheel]);
-const chatSwiper = new Swiper('.swiper', {
-  modules: [Scrollbar, Mousewheel, Manipulation],
-  watchOverflow: true,
+//still refuses to work
+const swiperChat = new Swiper(".mySwiper", {
+  modules: [Navigation, Pagination, Scrollbar, EffectCoverflow, Mousewheel ],
   direction: "vertical",
-  speed: 220,
-
-  // refuses to work:
 
   slidesPerView: "auto",
-  centeredSlides:false,
   freeMode: true,
-  mousewheel: {
-    eventsTarget: '.chat',
-    enabled: true,
-    sensitivity: 9.9,
-    releaseOnEdges: true,
-  },
-
   scrollbar: {
-    el: "swiper-scrollbar",
-    draggable: true,
-    dragSize: 600
+    el: ".swiper-scrollbar",
   },
-  autoHeight: true
+  mousewheel: true,
 });
-
-//creating chat list from array for now
-
-// const chatRoomList = new Section('.chatlist__list');
-// const activeChat = new Chat('.chat');
-
-// const chatRooms = fakeuserList.map(user => {
-//   const room = new ChatRoom(
-//   {
-//     user: user,
-//     clickHandler: () => {
-//       room.activate();
-//       activeChat.switchRoom(user)
-//     },
-//     renderChatRoom: (_) => {chatRoomList.add(_)},
-//   })
-//   return room;
-// });
-
-// const chatList = new ChatList('chatlist__item_active');
-
 const controller = new ChatController(fakeuserList);

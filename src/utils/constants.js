@@ -35,6 +35,31 @@ const fakeChatHistoryTwo = [
     text: 'SHEST`!',
     date: '00:03',
   },
+  {
+    self: false,
+    text: 'SHEST`!',
+    date: '00:03',
+  },
+  {
+    self: false,
+    text: 'SHEST`!',
+    date: '00:03',
+  },
+  {
+    self: false,
+    text: 'SHEST`!',
+    date: '00:03',
+  },
+  {
+    self: false,
+    text: 'SHEST`!',
+    date: '00:03',
+  },
+  {
+    self: false,
+    text: 'SHEST`!',
+    date: '00:03',
+  },
 ]
 
 const fakeuserList = [

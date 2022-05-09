@@ -1,6 +1,17 @@
 .chat__wrapper {
-  min-height: 400px;
+  /* min-height: 400px; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  height: auto;
+  width: 100%;
+}
+
+.swiper {
+  height: 450px;
+  width: 100%;
+}
+
+.swiper-slide {
+  overflow: auto;
 }

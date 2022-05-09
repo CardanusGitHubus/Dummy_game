@@ -11,7 +11,7 @@ export default class ChatController {
   constructor(initialUsers) {
     this._activateRoom = _ => {};
     this._activeChat = new Chat('.chat', (name, mess) => {this._getMessage(name, mess)});
-    this._roomContainer = new Section('.chatlist__list');
+    this._roomContainer = new Section('.chatlist__list', true);
     this._users = initialUsers;
     this.buildChatList(initialUsers);
   }

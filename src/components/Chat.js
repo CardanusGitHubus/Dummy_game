@@ -17,7 +17,7 @@ export default class Chat {
     this._button = this._chatElement.querySelector('.chat__button_send');
     this._textarea = this._chatElement.querySelector('.chat__textarea');
 
-    this._messageContainer = new Section('.chat__wrapper');
+    this._messageContainer = new Section('.chat__wrapper', false);
 
     
     this._handleEnterKey = this._handleEnterKey.bind(this);

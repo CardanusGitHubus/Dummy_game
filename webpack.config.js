@@ -25,18 +25,26 @@ module.exports = {
       {
         test: /\.js$/,
         use: 'babel-loader',
-        exclude: /node_modules\/(?!(swiper|dom7)\/).*/,
+        // exclude: /node_modules\/(?!(swiper|dom7)\/).*/,
+      },
+      { // here doing the swiper loader and declaring no sideEffects
+        test: /swiper\.esm\.js/,
+        sideEffects: false
       },
       {
         test: /\.(png|svg|jpg|gif|webp|woff(2)?|eot|ttf|otf)$/,
         type: 'asset/resource'
       },
+      // {
+      //   test: /\.css$/,
+      //   use: [MiniCssExtractPlugin.loader, {
+      //     loader: 'css-loader',
+      //     options: { importLoaders: 1 }
+      //   }, 'postcss-loader']
+      // }
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, {
-          loader: 'css-loader',
-          options: { importLoaders: 1 }
-        }, 'postcss-loader']
+        use: [ 'style-loader', 'css-loader' ]
       }
     ]
   },

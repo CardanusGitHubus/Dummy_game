@@ -39,8 +39,12 @@
         <button class="chat__button chat__button_top"></button>
       </div>
 
-      <div class="swiper">
-        <div class="swiper-wrapper chat__wrapper"></div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide chat__wrapper">
+
+          </div>
+        </div>
         <div class="swiper-scrollbar"></div>
       </div>
 
@@ -117,7 +121,7 @@
   </div>
 
   <template id="message-template">
-    <div class="swiper-slide message">
+    <div class="message">
       <img src="#" class="message__user">
       <div class="message__textbox">
         <p class="message__text"></p>
@@ -128,7 +132,7 @@
   </template>
   <!--user own message have mod "self" aka message-self -->
   <template id="message-template-self">
-    <div class="swiper-slide message message_self">
+    <div class=" message message_self">
       <img src="#" class="message__user"></img>
       <div class="message__textbox">
         <p class="message__text"></p>
